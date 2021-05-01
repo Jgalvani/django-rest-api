@@ -44,9 +44,10 @@ INSTALLED_APPS = [
     ####    SHOP BACKEND APPS   ####
     'products',
     ####    OTHER APPS    ####
+    'corsheaders',
+    'drf_spectacular',
     'rest_framework',
     'rest_framework.authtoken',
-    'drf_spectacular',
 ]
 
 REST_FRAMEWORK = {
@@ -66,6 +67,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    ####    CORS MIDDLEWARE    ####
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",
+    "http://127.0.0.1:4200"
 ]
 
 ROOT_URLCONF = 'shop_backend.urls'

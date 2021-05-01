@@ -1,4 +1,5 @@
 Django
+django-cors-headers
 djangorestframework
 django-dotenv
 drf-spectacular
