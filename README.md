@@ -1,5 +1,5 @@
 # django-rest-api
-A rest API written with django
+A rest API written with django and rest framework: https://www.django-rest-framework.org/tutorial/1-serialization/ .
 
 ## INSTALLATION
 

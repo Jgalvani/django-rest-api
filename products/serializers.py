@@ -1,27 +1,22 @@
 from rest_framework import serializers
 
-from .models import Products
+from .models import Products, Categories
 
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Products
 
-        fields = [
-            'pk',
-            'name',
-            'description',
-            'price',
-            'stock',
-            'category',
-            'image',
-            'created_at',
-        ]
+        fields = '__all__'
 
         meta_kwargs = {
             'created_at': { 'required': False },
             'image': { 'required': False },
-            'description': { 'required': False },
-            'category': { 'required': False },
         }
 
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Categories
+
+        fields = '__all__'
