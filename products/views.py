@@ -45,7 +45,7 @@ class productDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class customerList(generics.ListCreateAPIView):
     """
-    Get all categories
+    Get all customers
     """
     queryset = Customers.objects.values()
     serializer_class = CustomerSerializer
@@ -54,7 +54,7 @@ class customerList(generics.ListCreateAPIView):
 
 class customerDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Edit a category
+    Edit a customer
     """
     queryset = Customers.objects
     serializer_class = CustomerSerializer
@@ -63,7 +63,7 @@ class customerDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class orderList(generics.ListCreateAPIView):
     """
-    Get all categories
+    Get all orders
     """
     queryset = Orders.objects.values()
     serializer_class = OrderSerializer
@@ -72,7 +72,7 @@ class orderList(generics.ListCreateAPIView):
 
 class orderDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Edit a category
+    Edit a order
     """
     queryset = Orders.objects
     serializer_class = OrderSerializer
